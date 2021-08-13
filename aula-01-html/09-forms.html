@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        input:invalid {
+            border: 2px dashed red;
+            background: rgb(223, 171, 171);
+        }
+
+        button#send_form{
+
+            width: 10%;
+            padding: 0;
+            margin: 0;
+            background: transparent;
+            border: 0;
+            outline: #2a73b3;
+            border-radius: 45px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="09-forms.php" method="GET">
+        Sexo <br>
+        <label for="sexo_m">M
+            <input type="radio" name="sexo" value="m" id="sexo_m">
+        </label>
+        <br>
+        <label for="sexo_f">F
+            <input type="radio" name="sexo" value="f" id="sexo_f">
+        </label>
+        <br>
+        <label for="email">Email
+            <input type="email" name="email" id="email" minlength="8" maxlength="20" required>
+        </label>
+        <label for="email2">Email
+            <input type="email" name="email" id="email2" minlength="8" maxlength="20" required>
+        </label>
+
+        <br>
+        <textarea name="textarea" id="" cols="15" rows="2"></textarea>
+        <br>
+        <button id="send_form"
+            type="submit">
+            <img
+                src="https://ogimg.infoglobo.com.br/in/24649523-8a0-224/FT1086A/x88249115.jpg.pagespeed.ic.GWoSdtcJ_C.jpg"
+                alt=""
+                style="width: 100%;">
+        </button>
+        <input type="submit" value="input subm">
+    </form>
+</body>
+</html>

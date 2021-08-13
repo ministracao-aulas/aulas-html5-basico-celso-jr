@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        * Todo os estados
+        * Estado XXX
+        Todas as cidades
+        Todas as cidades que comecem com XXX
+        Todas as cidades que terminem com XXX
+
+        */
+
+        /**/
+        div[estado=rondonia] > ul > li[cidade][nome*=p] {
+            background: red;
+            color: blue;
+        }
+        /**/
+    </style>
+</head>
+<body>
+    <div id="terra">
+        <div pais="brasil">
+            brasil <hr>
+            <div estado="parana">
+                parana <br>
+                <ul cidades>
+                    <li cidade nome="curitiba">
+                        curitiba
+                    </li>
+                    <li cidade nome="sao jose dos pinhais">
+                        sao jose dos pinhais
+                    </li>
+                    <li cidade nome="maria jose">
+                        maria jose
+                    </li>
+                    <li cidade nome="pinhais">
+                        pinhais
+                    </li>
+                    <li cidade nome="acapulco">
+                        acapulco
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div estado="rondonia">
+                rondonia <br>
+                <ul cidades>
+                    <li cidade nome="porto velho">
+                        porto velho
+                    </li>
+                    <li cidade nome="sao jose de rondonia">
+                        sao jose de rondonia
+                    </li>
+                    <li cidade nome="acapulco de rondonia">
+                        acapulco de rondonia
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
