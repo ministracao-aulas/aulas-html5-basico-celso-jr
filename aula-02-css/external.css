@@ -1,0 +1,9 @@
+/*EXTERNAL*/
+div p span {
+    color: blue;
+    font-weight: bold;
+}
+
+div p span.amarelo {
+    color: yellow ;
+}
