@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>03 css inline, inside e external</title>
+    <!--
+        https://www.w3schools.com/cssref/css_selectors.asp
+        https://www.w3schools.com/cssref/trysel.asp
+    -->
 
     <style>
         /*INSIDE*/
@@ -16,10 +20,93 @@
         div p span.amarelo {
             color: rgb(122, 122, 14);
         }
+
+        div p span.amarelo2 {
+            color: pink !important;
+        }
+
+        div>p>span.amarelo2 {
+            color: yellow !important;
+        }
+
+        button.btn{
+            background-color: green;
+        }
+
+        .alert-content ~ button.btn{
+            background-color: PINK;
+        }
+
+        .alert-content + button.btn{
+            background-color: blue;
+        }
+
+        .alert-box button:last-child{
+            background-color: yellow;
+        }
+
+        .alert-box > button:last-of-type{
+            background-color: rgb(179, 179, 22);
+        }
+
+        a[href]         { color: blue; }        /* CONTENHA o atributo href*/
+        a[href*="https"] { color: pink; }       /* valor do atributo href CONTENHA https*/
+        a[href="https"] { color: grey; }        /* valor do atributo href é EXATAMENTE https*/
+        a[href$="https"]{ color: yellow; }      /* valor do atributo href TERMINA com https*/
+        a[href^="https://"]{ color: green; }    /* valor do atributo href COMECE com https://*/
+        a[href^="http://"]{ color: red; }       /* valor do atributo href COMECE com http://*/
+        a[href^="#"]{ color: rgb(255, 0, 170); } /* Todos os âncoras */
+
+
+        span[nome="tiago fernandes"]{ color: rgb(255, 0, 170); }
     </style>
     <link rel="stylesheet" href="external.css">
 </head>
 <body>
+
+    <a href="https://algoaqui">Link seguro</a>
+    <a href="http://algoaqui">Link não seguro</a>
+    <br>
+    <a href="#1algoaqui">Âncora 1</a>
+    <a href="#2algoaqui">Âncora 2</a>
+    <a href="#3algoaqui">Âncora 3</a>
+    <a href="#">Âncora 4</a>
+    <br>
+
+    <span nome="tiago fernandes">tiago fernandes</span>
+    <span nome="paula fernandes">paula fernandes</span>
+    <span nome="tiago franca">tiago franca</span>
+
+    <a href="https">algo</a>
+    <a href="httpshttps">algo</a>
+    <a href="httpsalgodepois">algo</a>
+    <a href="algoanteshttpsalgodepois">algo</a>
+    <a href="SDSDSDDS">algo</a>
+
+    <div class="alert-box">
+        <button class="btn">button BROTHER 1</button>
+        <button class="btn">button BROTHER 2</button>
+        <button class="btn">button BROTHER 3</button>
+        <button class="btn">button BROTHER 4</button>
+        <div class="body">
+            <button class="btn">button body 1</button>
+            <button class="btn">button body 2</button>
+            <div class="body2">
+                <button class="btn">button body2 1</button>
+                <button class="btn">button body2 2</button>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="btn">button</button>
+
+    <div>
+        <main>
+            <p><span class="amarelo2">dentro do span</span>. Aqui é paragrafo</p>
+        </main>
+    </div>
+
     <div>
         <p>
             Meu nome é <span class="amarelo" style="/*INLINE*/ font-size: 20px; color: red; text-transform: uppercase;">Tiago</span>
