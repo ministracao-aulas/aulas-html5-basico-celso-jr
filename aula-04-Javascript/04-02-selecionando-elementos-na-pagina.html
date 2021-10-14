@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function addItem()
+        {
+            var input = document.querySelector('input.item-input');
+
+            if(!input.value)
+                return;
+            var item = document.createElement('li');
+            item.innerText = input.value;
+            document.querySelector('ul.list-container').appendChild(item);
+            input.value = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelector('button.item-add').addEventListener('click', function(e) {
+                addItem();
+            });
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="item-input">
+    <br>
+    <button class="item-add">Clique</button>
+
+    <ul class="list-container">
+    </ul>
+</body>
+</html>
