@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Load</button>
+    <ul></ul>
+
+    <script>
+
+        function addItem(value)
+        {
+            if(!value)
+                return;
+
+            var item = document.createElement('li');
+            item.innerText = value;
+
+            document.querySelector('ul').appendChild(item);;
+        }
+
+        function loadData()
+        {
+            fetch('http://0.0.0.0:8080/data.json')
+            .then((response) => response.json())
+            .then((data) => {
+                addItem(data.nome);
+                addItem(data.sobrenome);
+            })
+        }
+
+
+        document.querySelector('button').addEventListener('click', function(e) {
+            loadData();
+        });
+    </script>
+</body>
+</html>
